@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Kurenaido&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*font-family: 'Roboto Mono', monospace;
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+	font-family: 'Zen Kurenaido', sans-serif;*/
+	font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+::selection {
+	opacity: 0;
+	color: #78e644;
+}
+
+body {
+	background-color: #eee;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+	font-size: 2em;
+	margin: 100px 0 25px 0;
+	color: #555;
+}
+
+h1::after {
+	content: '';
+	display: flex;
+	width: 100%;
+	height: 2px;
+	background-color: #666;
+}
+
+p {
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+i {
+	font-family: 'Roboto Mono', monospace;
+	color: #c453db;
+}
+
+strong {
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+	color: #4ba6f4;
+}
+
+img {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 100%;
+	filter: brightness(93%);
+}
+
+progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 10px;
+	border: none;
+	z-index: 1000;
+}
+
+progress::-webkit-progress-bar {
+	background: transparent;
+}
+
+progress::-webkit-progress-value {
+	background: dodgerblue;
+}
+
+#clear-point-button {
+	cursor: pointer;
+	overflow: hidden;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 10px;
+	bottom: 10px;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+	background: rgba(255, 0, 0, 0.5);
+	border: 1px solid #fff;
+	box-shadow: 0 0 100px #ddd;
+}
+
+#clear-point-button::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -90%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	transform: skewX(-30deg);
+	z-index: -1
+}
+
+.warning {
+	color: red;
+	font-weight: 500;
+}
+
+.rooot {
+	text-decoration: overline;
+}
+
+.container {
+	position: absolute;
+	left: 10vw;
+	width: 80vw;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	margin: 25px;
+	width: 100%;
+}
+
+.title h1 {
+	font-size: 3em;
+}
+
+.block {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0 50px 0;
+	padding: 20px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	background: rgba(200, 200, 200, 0.2);
+	box-shadow: 0 0 100px #ddd;
+}
+
+.block::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -90%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	transform: skewX(-30deg);
+	z-index: -1
+}
+
+.block p {
+	font-size: 150%;
+	margin: 0;
+}
+
+.block .q {
+	font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.small {
+	max-width: 400px;
+}
+
+.medium {
+	max-width: 600px;
+}
+
+.button {
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	background: rgba(200, 200, 200, 0.2);
+	box-shadow: 0 0 100px #ccc;
+	transition: all 0.1s 0s ease-out;
+}
+
+.button::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -90%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.4);
+	transform: skewX(-30deg);
+}
+
+.button ion-icon {
+	width: 50%;
+	height: 50%;
+}
+
+.button:hover {
+	margin: -2.5px 0 0 -2.5px;
+	width: 55px;
+	height: 55px;
+	box-shadow: 0 0 100px #888;
+}
+
+.card-image {
+	filter: brightness(92%);
+}
+
+.content-card {
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 10px;
+	width: 200px;
+	height: 300px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	background: rgba(220, 220, 220, 0.2);
+	box-shadow: 0 0 100px #ddd;
+	transition: all 0.5s 0s ease-out;
+}
+
+.content-card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -90%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	transform: skewX(-30deg);
+}
+
+/*.content-card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 15%;
+	width: 5%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	transform: skewX(-30deg);
+}*/
+.content-card:hover {
+	margin-top: 0;
+	margin-bottom: 20px;
+	box-shadow: 0 0 100px #bbb;
+}
+
+.content-card p {
+	font-family: 'Roboto Mono', monospace;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	font-size: 150%;
+}
+
+.content-card .point {
+	font-family: 'Roboto Mono', monospace;
+	position: absolute;
+	top: 0;
+	left: 140px;
+	margin: 5px;
+	font-size: 120%;
+	color: red;
+}
+
+.content-card span {
+	font-family: 'Zen Maru Gothic', sans-serif;
+	position: absolute;
+	bottom: 5px;
+	font-weight: 500;
+	font-size: 120%;
+}
+
+.content-card img {
+	position: absolute;
+	top: 60px;
+	margin: 0;
+	width: 80%;
+}
+
+.questions-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.question img {
+	margin: 0 0 10px 10px;
+}
+
+#point-container {
+	overflow: hidden;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: 1px solid #fff;
+	background: rgba(220, 220, 220, 0.2);
+	box-shadow: 0 0 100px #b3dd55;
+}
+
+#point-container::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -70%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	transform: skewX(-30deg);
+	z-index: -1
+}
+
+#point-container span {
+	font-size: 120%;
+}
+
+#tablecontent-area {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+#tablecontent-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 75vw;
+	height: 100vh;
+}
+
+#oops {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background: #eee;
+}
+
+#oops .title {
+	font-size: 4em;
+}

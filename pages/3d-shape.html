@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" , type="text/css" , href="../assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+	<title>空間図形</title>
+</head>
+
+<body>
+	<progress max="100" , value="0"></progress>
+
+	<div class="container">
+		<div class="title">
+			<h1>空間図形での利用</h1>
+		</div>
+
+		<h1>対角線の長さ</h1>
+		
+		<p>三平方の定理が使えるのは直角三角形です。</p>
+		<p>定理を利用する場合は、図から直角三角形を探すか、補助線をかいて直角三角形をつくる必要があります。</p>
+		<p>立体は切断したり、展開したりして、できる限り平面で考えます。</p>
+		<p>下の問題をもとに解説します。</p>
+		<div class="block">
+			<p class="q">対角線BHの長さを求めなさい。</p>
+		</div>
+		<p>まずは、底面<i>EFGH</i>を平面に描き出し、直角三角形<i>FGH</i>で三平方の定理を使うと</p>
+		<div class="block">
+			<p><i>FH²=3²+4²<br><br>FH²=25<br><br>FH=±5<br><br>FH > 0</i>より<br><br><strong><i>FH=5cm</i></strong></p>
+		</div>
+		<p>次に直方体を面<i>BFHD</i>で切断した面を平面に描き出し、直角三角形<i>BFH</i>で三平方の定理を使うと、</p>
+		<div class="block">
+			<p><i>BH²=5²+5²<br><br>BH²=50<br><br>BH=±5√2<br><br>BH>0</i>より<br><br><strong><i>BH=5√2</i></strong></p>
+		</div> 
+		<p>となり、対角線<i>BH</i>の長さは<i>5√2</i>となります。</p>
+		<div class="block">
+			<p>直方体の対角線の公式 :<br><br><i>a×b×c</i>の直方体の対角線の長さは<br><br><strong><i>√<span class="rooot">a²+b²+c²</span></i></strong></p>
+		</div>
+		
+		<h1>円錐の体積</h1>
+		
+		<div class="block">
+			<p><strong>錐の体積＝低面積×高さ÷３</strong><br><br>母線の長さと底面の半径が分かっている円錐では、三平方の定理で高さを出せば体積を出すことができる。</p>
+		</div>
+		
+		<div class="block">
+			<p class="q">問題<br><br>母線の長さ17cm、底面の半径8cmの円錐の体積を求めなさい。</p>
+		</div>
+		<p>頂点を通り、底面に垂直な平面で円錐を切断すると、切断面は二等辺三角形になります。</p>
+		<p>この二等辺三角形の高さが円錐の高さになるので、</p>
+		<div class="block">
+			<p>三平方の定理より<br><br><i>17²=8²+h²<br><br>h²=289-64<br><br>h²=225<br><br>h=±15<br><br>h>0</i>より<br><br><i>h=15</i>よって<br><br>体積＝<i>8×8×π×15÷3=320π</i></p>
+		</div>
+		<p>となり、体積は320πcm³となります。</p>
+		
+		<h1>四角錐の体積</h1>
+		
+		<div class="block">
+			<p class="q">問題<br><br>底面が1辺12cmの正方形で、他の辺が15cmの正四角錐OABCDの体積を求めなさい。</p>
+		</div>
+		
+		<p>点<i>O</i>、<i>A</i>、<i>C</i>を通る平面で切断すると、切断面の<i>△OAC</i>は二等辺三角形になります。</p>
+		<p>辺<i>AC</i>は底面の正方形<i>ABCD</i>の対角線なので、三平方の定理により</p>
+		<div class="block">
+			<p><i>AC²=12²+12²<br><br>AC²=288<br><br>AC=±12√2<br><br>AC>0</i>より<br><br><strong><i>AC=12√2</i></strong></p>
+		</div>
+		<p><i>△OAC</i>で、<i>O</i>から<i>AC</i>に引いた垂線を<i>OM</i>とすると、これが四角錐の高さになる。</p>
+		<p>辺<i>AM</i>は辺<i>AC</i>の<i>2/1</i>なので<i>AM=6√2</i>。</p>
+		<p><i>△OAM</i>で三平方の定理を使うと</p>
+		<div class="block">
+			<p><i>15²=OM²+(6√2)²<br><br>OM²=225-72<br><br>OM²=153<br><br>OM=±3√17<br><br>OM>0</i>より<br><br><i>OM=3√17</i>よって、<br><br>高さ＝<i>3√17</i>、<br><br>底面積＝<i>12×12=144</i>、<br><br>体積＝<i>底面積×高さ÷３</i><br><br><i>=144×3√17÷3</i><br><br><strong><i>=144√17cm³</i></strong></p>
+		</div>
+		
+		<h1>正四面体の体積</h1>
+		
+		<div class="block">
+			<p class="q">問題<br><br>1辺6cmの正四面体の体積を求めなさい。</p>
+		</div>
+		
+		<p>辺<i>BC</i>の中点<i>M</i>と頂点<i>A</i>、<i>D</i>を通る平面で、正四面体を2つの三角錐<i>BAMD</i>と<i>CAMD</i>に分ける。</p>
+		<p><i>AM⊥BC</i>、<i>DM⊥BC</i>なので、面<i>AMD</i>と辺<i>BC</i>は垂直となります。</p>
+		<p>すると、それぞれの三角錐で<i>△AMD</i>を底面とすると、<i>BAMD</i>の高さは<i>BM</i>、<i>CAMD</i>の高さは<i>CM</i>で、<i>M</i>が<i>BC</i>の中点なので<i>BM=CM=3</i>となります。</p>
+		<p>辺<i>AM</i>は側面の正三角形<i>ABC</i>の点<i>A</i>から辺<i>BC</i>の中点<i>M</i>を結んだ線です。</p>
+		<p><i>△ABM</i>は<i>30°</i>、<i>60°</i>、<i>90°</i>の直角三角形なので、<i>AB:BM:AM=2:1:√3</i>より<i>AM=3√3cm</i>となります。</p>
+	</div>
+
+	<script src="../assets/js/animation.js"></script>
+</body>
+
+</html>
